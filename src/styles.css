@@ -11,3 +11,17 @@
 body{
     background-color: black;
 }
+
+.div-row {
+    box-shadow: 1px 1px 10px rgb(102, 102, 102); 
+}
+
+.cuerpo-fondo{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../src/assets/imagen/via-lactea.jpg);
+}
+
+.h2-estilo{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;   
+}

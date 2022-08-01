@@ -1,0 +1,10 @@
+.sobre-mi p span{
+    letter-spacing: 5px;
+}
+
+
+.perfil-about img {
+    filter: grayscale(50%);
+    box-shadow: 10px 10px 20px black;
+    
+}
