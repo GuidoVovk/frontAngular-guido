@@ -20,7 +20,8 @@
           </li>
         </ul>
         <span class="float-end ms-5">
-            <button type="button" class="btn btn-outline-secondary"><i class="fa-solid fa-user-lock"></i>Login</button>
+          <button *ngIf="isLogged" type="button" class="btn btn-outline-secondary" (click)="onClick()">Cerrar Sesión</button>
+          <button *ngIf="!isLogged" type="button" class="btn btn-outline-secondary"(click)="onLogin()"><i class="fa-solid fa-user-lock"></i>Login</button>
         </span>
       </div>
     </div>
@@ -28,7 +29,7 @@
 <!--Nav-bar-->
 
 <!--Banner-->  
-    <div class="row justify-content-start align-items-center text-white mt-5" id="inicio" style="height:500px;">
+    <div class="row justify-content-start align-items-center text-white mt-5" id="inicio" style="height:500px">
         <div class="col">
             <div class="banner text-center">
                 <p class="text-uppercase text-white">bienvenidos</p>

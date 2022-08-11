@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "login-33ab0": {
+      "hosting": {
+        "front-guido": [
+          "login-33ab0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "login-33ab0"
+  }
+}

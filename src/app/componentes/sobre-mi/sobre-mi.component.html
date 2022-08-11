@@ -3,11 +3,11 @@
     <div class="div-row row py-4 perfil-about border border-secondary">
         <h4 class="text-warning text-uppercase text-center">Sobre mí</h4>
         <div class="col-lg-3 text-center">
-            <img src="../../../assets/imagen/guido.jpeg" alt="" class="img-fluid rounded" width="250px" height="300px">
+            <img [src]="persona.img" alt="" class="img-fluid rounded" width="250px" height="300px">
         </div>
         <div class="col-lg-9 p-5 text-center">
-            <p class="fs-4 text-uppercase text-secondary mt-3"><span>Desarrollador web jr</span></p>
-            <p class="fs-5 px-5 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam officiis fugiat molestias, aut voluptatum, eligendi inventore aspernatur voluptate et error quasi, voluptates explicabo mollitia earum rerum qui. Eos, praesentium voluptas.</p>
+            <p class="fs-4 text-uppercase text-secondary mt-3"><span>{{persona.puesto}}</span></p>
+            <p class="fs-5 px-5 text-white">{{persona.descripcion}}</p>
         </div>
     </div>
 </div>       

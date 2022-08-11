@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { persona } from 'src/app/model/persona.model';
+import { AuthService } from 'src/app/service/auth/auth.service';
 import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
@@ -8,13 +10,39 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
+  public isLogged = false;
   persona:any;
 
-  constructor(public personaService: PersonaService) { }
+  constructor(public personaService: PersonaService, private router:Router, private authService: AuthService) {
+    this.authService.stateUser().subscribe( res => {
+      if (res){
+        console.log("está logueado");
+        this.isLogged = true;
+      } else {
+        console.log("no está logueado");
+        this.isLogged = false;
+      } 
+    })
+   }
 
   ngOnInit(): void {
     this.personaService.verPersonas().subscribe(data => {this.persona = data});
     
   }
+
+  onClick(){
+    this.authService.logout()
+     .then(() =>{
+       this.router.navigate(['/login']);
+     })
+     .catch(error => console.log(error));
+    
+  }
+
+  onLogin(){
+    this.router.navigate(['/login'])
+  }
+
+  
 
 }

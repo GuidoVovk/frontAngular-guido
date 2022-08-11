@@ -12,6 +12,6 @@ export class PersonaService {
   constructor(private http:HttpClient) { }
 
   public verPersonas():Observable<any> {
-    return this.http.get<any>(this.url + "persona/encontrar/6");
+    return this.http.get<any>(this.url + "persona/encontrar/1");
   }
 }
