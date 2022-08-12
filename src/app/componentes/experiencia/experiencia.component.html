@@ -2,25 +2,14 @@
 
 <div class="cuerpo-fondo px-5 py-3 sobre-mi" id="experiencia">
     <div class="div-row row mt-4 px-5 border border-secondary">
-        <h4 class="text-warning text-uppercase text-center mt-4 mb-4">Experiencia</h4><button type="button" class="btn btn-warning text-white float-end" (click)="onClick()">
+        <h4 class="text-warning text-uppercase text-center mt-4 mb-4">Experiencia</h4><button type="button" class="btn btn-dark text-white float-end" (click)="onClick()" *ngIf="isLogged">
             Nueva experiencia</button>  
         <div class="col-sm-8 my-4"> 
             <ul class="list text-white">
-                <li class="list-item">
-                    <h6 class="text-uppercase fw-bold">Rider - delivery</h6>
-                    <h6 class="text-uppercase text-white-50">Pedidos Ya / 2022-actualidad</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam totam molestias excepturi iusto maiores maxime exercitationem error eos? Distinctio aliquid quisquam, maxime esse beatae sunt corpori veniam odio molestiae assumenda?</p>
+                <li *ngFor="let Experiencia of expe" class="list-item">
+                    <h6 class="text-uppercase fw-bold">{{Experiencia.nombreE}}</h6>
+                    <p>{{Experiencia.descripcionE}}</p>
                 </li>
-                <li class="list-item">
-                    <h6 class="text-uppercase fw-bold">Encargado</h6>
-                    <h6 class="text-uppercase text-white-50">Heladería Gianduia / 2018-2022</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam totam molestias excepturi iusto maiores maxime exercitationem error eos? Distinctio aliquid quisquam, maxime esse beatae sunt corpori veniam odio molestiae assumenda?</p>
-                </li>
-                <li class="list-item">
-                    <h6 class="text-uppercase fw-bold">Encargado</h6>
-                    <h6 class="text-uppercase text-white-50">Heladería Gianduia / 2018-2022</h6>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam totam molestias excepturi iusto maiores maxime exercitationem error eos? Distinctio aliquid quisquam, maxime esse beatae sunt corpori veniam odio molestiae assumenda?</p>
-                </li>            
             </ul>            
         </div>
     

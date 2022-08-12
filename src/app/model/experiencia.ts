@@ -4,7 +4,7 @@ export class Experiencia {
     descripcionE : string;
 
     constructor(nombreE: string, descripcionE: string){
-        this.nombreE = nombreE
+        this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }
 }
