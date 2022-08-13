@@ -21,6 +21,8 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia/new-experiencia.component';
 import { CommonModule } from '@angular/common';
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
+import { EditEducacionComponent } from './componentes/estudios/edit-educacion.component';
+import { NewEducacionComponent } from './componentes/estudios/new-educacion.component';
 
 
 
@@ -38,7 +40,9 @@ import { EditExperienciaComponent } from './componentes/experiencia/edit-experie
     LoginComponent,
     RegistroComponent,
     NewExperienciaComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    EditEducacionComponent,
+    NewEducacionComponent
    
   ],
   imports: [

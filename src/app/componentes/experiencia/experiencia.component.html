@@ -2,15 +2,28 @@
 
 <div class="cuerpo-fondo px-5 py-3 sobre-mi" id="experiencia">
     <div class="row mt-4 px-5 border border-secondary">
-        <h4 class="text-warning text-uppercase text-center mt-4 mb-4">Experiencia<button *ngIf="isLogged" type="button" class="btn btn-primary text-white float-end me-1" (click)="onClick()">Nueva experiencia</button></h4>  
-        <div class="col-sm-12 my-4"> 
-            <ul class="list text-white">
-                <li *ngFor="let Experiencia of expe" class="list-item">
-                    <h6 class="text-uppercase fw-bold">{{Experiencia.nombreE}}<a class="float-end me-5" *ngIf="isLogged" routerLink="/editexp/{{Experiencia.id}}"><i class="bi bi-pencil-square text-white fs-4 me-4" id="edit-icon"></i><i class="bi bi-trash text-danger fs-4" id="delete-icon"></i></a></h6>
-                    <p>{{Experiencia.descripcionE}}</p>
-                </li>
-            </ul>            
-        </div>
+        <h4 class="text-warning text-uppercase text-center mt-4 mb-4">Experiencia<button *ngIf="isLogged" type="button"
+                class="btn btn-outline-primary text-white float-end me-4" (click)="onClick()">Nueva experiencia</button></h4>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Experiencia of expe">
+                    <td>
+                        <h6 class="text-uppercase fw-bold text-white">{{Experiencia.nombreE}}</h6>
+                        <p class="text-white">{{Experiencia.descripcionE}}</p>
+                    </td>
+                    <td *ngIf="isLogged" class="pt-3">
+                        <button class="btn btn-outline-warning float-end" routerLink="/editexp/{{Experiencia.id}}">
+                            <i class="bi bi-pencil-square text-white fs-6" id="edit-icon"></i>
+                        </button>
+                    </td>
+                    <td *ngIf="isLogged" class="pt-3">
+                        <button class="btn btn-outline-danger" (click)="delete(Experiencia.id)">
+                            <i class="bi bi-trash text-white fs-6" id="delete-icon"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 

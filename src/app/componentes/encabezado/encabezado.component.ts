@@ -33,7 +33,7 @@ export class EncabezadoComponent implements OnInit {
   onClick(){
     this.authService.logout()
      .then(() =>{
-       this.router.navigate(['/login']);
+       this.router.navigate(['/home']);
      })
      .catch(error => console.log(error));
     

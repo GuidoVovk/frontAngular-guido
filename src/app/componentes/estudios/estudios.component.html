@@ -1,5 +1,32 @@
-<!--Estudios-->
-<div class="cuerpo-fondo px-5 py-3 sobre-mi" id="experiencia">
+
+<div class="cuerpo-fondo px-5 py-3 sobre-mi" id="educacion">
+    <div class="mt-4 px-5 border border-secondary">
+        <h4 class="text-warning text-uppercase text-center mt-4 mb-4">Educación<button *ngIf="isLogged" type="button"
+                class="btn btn-outline-success text-white float-end me-4" routerLink="/nuevaedu">Nueva educación</button></h4>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <td>
+                        <h6 class="text-uppercase fw-bold text-white">{{Educacion.nombreEdu}}</h6>
+                        <p class="text-white-50">{{Educacion.fechaEdu}}</p>
+                        <p class="text-white">{{Educacion.descripcionEdu}}</p>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-outline-warning float-end" routerLink="/editedu/{{Educacion.id}}">
+                            <i class="bi bi-pencil-square text-white fs-6" id="edit-icon"></i>
+                        </button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-outline-danger" (click)="delete(Educacion.id)">
+                            <i class="bi bi-trash text-white fs-6" id="delete-icon"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--<div class="cuerpo-fondo px-5 py-3 sobre-mi" id="experiencia">
     <div class="div-row row mt-4 px-5 border border-secondary">
         <h4 class="text-warning text-uppercase text-center mt-4 mb-4">Estudios</h4>
         <div class="col-sm-8 my-4"> 
@@ -32,5 +59,5 @@
             
         </div>
     </div>
-</div>
+</div>-->
 <!--Estudios-->
