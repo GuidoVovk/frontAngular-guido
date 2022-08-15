@@ -23,6 +23,14 @@ import { CommonModule } from '@angular/common';
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
 import { EditEducacionComponent } from './componentes/estudios/edit-educacion.component';
 import { NewEducacionComponent } from './componentes/estudios/new-educacion.component';
+import { NewSkillsComponent } from './componentes/habilidades/new-skills.component';
+import { EditSkillsComponent } from './componentes/habilidades/edit-skills.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
+
+
 
 
 
@@ -42,7 +50,9 @@ import { NewEducacionComponent } from './componentes/estudios/new-educacion.comp
     NewExperienciaComponent,
     EditExperienciaComponent,
     EditEducacionComponent,
-    NewEducacionComponent
+    NewEducacionComponent,
+    NewSkillsComponent,
+    EditSkillsComponent
    
   ],
   imports: [
@@ -53,7 +63,8 @@ import { NewEducacionComponent } from './componentes/estudios/new-educacion.comp
     ReactiveFormsModule,
     CommonModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
