@@ -26,6 +26,8 @@ import { NewEducacionComponent } from './componentes/estudios/new-educacion.comp
 import { NewSkillsComponent } from './componentes/habilidades/new-skills.component';
 import { EditSkillsComponent } from './componentes/habilidades/edit-skills.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NuevoProyectoComponent } from './componentes/proyectos/nuevo-proyecto.component';
+import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
 
 
 
@@ -52,7 +54,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EditEducacionComponent,
     NewEducacionComponent,
     NewSkillsComponent,
-    EditSkillsComponent
+    EditSkillsComponent,
+    NuevoProyectoComponent,
+    EditProyectoComponent
    
   ],
   imports: [

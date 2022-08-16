@@ -1,13 +1,13 @@
 <!--About-->
-<div class="cuerpo-fondo px-5 py-3 sobre-mi" id="sobre-mi">  
+<div class="px-5 pt-3 pb-1 sobre-mi" id="sobre-mi">  
     <div class="div-row row py-4 perfil-about border border-secondary">
-        <h4 class="text-warning text-uppercase text-center">Sobre mí</h4>
+        <h6 class="text-warning text-uppercase text-center">Sobre mí</h6>
         <div class="col-lg-3 text-center">
-            <img [src]="persona.img" alt="" class="img-fluid rounded" width="250px" height="300px">
+            <img [src]="persona.img" alt="" class="img-fluid rounded mt-4" width="200px" height="250px">
         </div>
-        <div class="col-lg-9 p-5 text-center">
+        <div class="col-lg-9 p-5">
             <p class="fs-4 text-uppercase text-secondary mt-3"><span>{{persona.puesto}}</span></p>
-            <p class="fs-5 px-5 text-white">{{persona.descripcion}}</p>
+            <p class="fs-5 text-white">{{persona.descripcion}}</p>
         </div>
     </div>
 </div>       

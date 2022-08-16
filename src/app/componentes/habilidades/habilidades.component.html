@@ -2,17 +2,17 @@
 
 <div class="px-5 py-3">
     <div class="cuerpo-fondo div-row row mt-3 pb-5 border border-secondary justify-content-around">
-        <h4 class="text-warning text-uppercase mt-4 mb-4">Habilidades<button type="button"
+        <h4 class="text-warning text-uppercase mt-4 mb-4">Habilidades<button *ngIf="isLogged" type="button"
                 class="btn btn-outline-success text-white float-end me-4" routerLink="/nuevaSkill">Nueva skill</button>
         </h4>
         <div *ngFor="let Skills of skills" class="col-sm-6 text-white">
             <h6 class="fw-bold text-uppercase">{{Skills.nombreSkill}}</h6>
-            <div class="progress">
+            <div class="progress mb-3">
                 <div class="progress-bar bg-warning text-dark fw-bold" role="progressbar"  [style.width.%]="Skills.porcentaje"
                     aria-valuenow="" aria-valuemin="0" aria-valuemax="100">{{Skills.porcentaje}}%</div>
 
             </div>
-            <div  class="mb-2">
+            <div *ngIf="isLogged" class="mb-3">
                 <button class="btn btn-outline-primary mt-2 me-1" routerLink="/editSkill/{{Skills.id}}">
                     <i class="bi bi-pencil-square text-white fs-6" id="edit-icon">Editar</i>
                 </button><button class="btn btn-outline-danger mt-2" (click)="delete(Skills.id)">
