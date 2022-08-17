@@ -1,8 +1,11 @@
 <!--Proyectos-->
-<div class="px-5 py-3">
-    <div class="cuerpo-fondo div-row row mt-3 pb-5 border border-secondary text-center">
-        <h4 class="text-warning text-uppercase text-center mt-4 mb-4">Proyectos<button *ngIf="isLogged" type="button"
-            class="btn btn-outline-success text-white float-end me-4" routerLink="/nuevoProyecto">Nuevo proyecto</button></h4>
+<div class="text-center">
+    <h3 class="sub text-warning text-uppercase bg-dark mt-5 mx-2 py-2">Proyectos</h3>
+    <button *ngIf="isLogged" type="button"
+            class="btn btn-outline-success text-white" routerLink="/nuevoProyecto">Nuevo proyecto</button>
+</div>
+<div class="px-5 pt-3 pb-1 mx-4">
+    <div class="row mt-4 px-5 border border-white text-center pt-4"> 
         <div *ngFor="let Proyectos of proyectos" class="col-sm-3 pb-3">
             <div class="card-body text-white border border-white p-1 bg-dark">
                 <img class="card-img-top bg-white" [src]="Proyectos.imgP" width="90%" height="150px" alt="Card image">

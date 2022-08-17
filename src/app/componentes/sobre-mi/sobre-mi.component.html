@@ -1,14 +1,16 @@
 <!--About-->
-<div class="px-5 pt-3 pb-1 sobre-mi" id="sobre-mi">  
-    <div class="div-row row py-4 perfil-about border border-secondary">
-        <h6 class="text-warning text-uppercase text-center">Sobre mí</h6>
+<h3 class="sub text-warning text-uppercase text-center bg-dark mt-5 p-2">Sobre mí</h3>
+<div class="px-5 pt-3 pb-1 mx-4 sobre-mi" id="sobre-mi">  
+    <div class="row py-4">
         <div class="col-lg-3 text-center">
-            <img [src]="persona.img" alt="" class="img-fluid rounded mt-4" width="200px" height="250px">
+            <img [src]="persona.img" alt="" class="img-fluid mt-4 border border-light" width="200px" height="250px">
         </div>
-        <div class="col-lg-9 p-5">
-            <p class="fs-4 text-uppercase text-secondary mt-3"><span>{{persona.puesto}}</span></p>
-            <p class="fs-5 text-white">{{persona.descripcion}}</p>
+        <div class="col-lg-9 px-5 mt-4 text-center d-flex align-items-center border border-light">
+            <div class="">
+                <p class="fs-4 text-uppercase text-secondary mt-3"><span>{{persona.puesto}}</span></p>
+                <p class="fs-5 text-white mt-4">{{persona.descripcion}}</p>
+            </div>
         </div>
     </div>
-</div>       
+</div>
 <!--About-->

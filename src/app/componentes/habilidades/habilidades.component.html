@@ -1,16 +1,17 @@
 <!--Habilidades-->
-
-<div class="px-5 py-3">
-    <div class="cuerpo-fondo div-row row mt-3 pb-5 border border-secondary justify-content-around">
-        <h4 class="text-warning text-uppercase mt-4 mb-4">Habilidades<button *ngIf="isLogged" type="button"
-                class="btn btn-outline-success text-white float-end me-4" routerLink="/nuevaSkill">Nueva skill</button>
-        </h4>
-        <div *ngFor="let Skills of skills" class="col-sm-6 text-white">
-            <h6 class="fw-bold text-uppercase">{{Skills.nombreSkill}}</h6>
+<div class="text-center">
+    <h3 class="sub text-warning text-uppercase bg-dark mt-5 mx-2 py-2">Habilidades</h3>
+    <button *ngIf="isLogged" type="button" class="btn btn-outline-success text-white" routerLink="/nuevaSkill">Nueva
+        habilidad</button>
+</div>
+<div class="px-5 pt-3 pb-1 mx-4">
+    <div class="row mt-4 px-5 border border-white">
+        <div *ngFor="let Skills of skills" class="col-sm-6 text-white pt-4">
+            <h4 class="text-uppercase">{{Skills.nombreSkill}}</h4>
             <div class="progress mb-3">
-                <div class="progress-bar bg-warning text-dark fw-bold" role="progressbar"  [style.width.%]="Skills.porcentaje"
-                    aria-valuenow="" aria-valuemin="0" aria-valuemax="100">{{Skills.porcentaje}}%</div>
-
+                <div class="progress-bar bg-warning text-dark fw-bold" role="progressbar"
+                    [style.width.%]="Skills.porcentaje" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">
+                    {{Skills.porcentaje}}%</div>
             </div>
             <div *ngIf="isLogged" class="mb-3">
                 <button class="btn btn-outline-primary mt-2 me-1" routerLink="/editSkill/{{Skills.id}}">
@@ -27,9 +28,8 @@
 <!--Habilidades-->
 
 <!--Soft skills-->
-<div class="px-5 py-3">
-    <div class="cuerpo-fondo div-row row mt-3 pb-5 border border-secondary text-white text-center">
-
+<div class="px-5 pt-3 pb-1 mx-4">
+    <div class="row mt-4 px-5 border border-white text-center text-white">
         <div class="col-sm-4 pb-4 pt-5">
             <img src="../../../assets/imagen/diversity_3_FILL0_wght400_GRAD0_opsz48.png" alt=""
                 class="bg-white rounded-circle p-2 my-3">

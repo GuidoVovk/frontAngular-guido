@@ -1,25 +1,25 @@
-
-<div class="cuerpo-fondo px-5 py-3 sobre-mi" id="educacion">
-    <div class="mt-4 px-5 border border-secondary">
-        <h4 class="text-warning text-uppercase text-center mt-4 mb-4">Educación<button *ngIf="isLogged" type="button"
-                class="btn btn-outline-success text-white float-end me-4" routerLink="/nuevaedu">Nueva educación</button></h4>
+<div class="text-center">
+    <h3 class="sub text-warning text-uppercase bg-dark mt-5 mx-2 py-2">Educacion</h3>
+    <button *ngIf="isLogged" type="button" class="btn btn-outline-success text-white"
+            routerLink="/nuevaedu">Nueva educación</button>
+</div>
+<div class="px-5 pt-3 pb-1 mx-4" id="educacion">
+    <div class="row mt-4 px-5 border border-white">
         <table class="table">
             <tbody>
                 <tr *ngFor="let Educacion of educacion">
                     <td>
-                        <h6 class="text-uppercase fw-bold text-white">{{Educacion.nombreEdu}}</h6>
+                        <h4 class="text-uppercase fw-bold text-white mt-3">{{Educacion.nombreEdu}}</h4>
                         <p class="text-white-50">{{Educacion.fechaEdu}}</p>
                         <p class="text-white">{{Educacion.descripcionEdu}}</p>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-outline-warning float-end" routerLink="/editedu/{{Educacion.id}}">
-                            <i class="bi bi-pencil-square text-white fs-6" id="edit-icon"></i>
-                        </button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-outline-danger" (click)="delete(Educacion.id)">
-                            <i class="bi bi-trash text-white fs-6" id="delete-icon"></i>
-                        </button>
+                        <div *ngIf="isLogged">
+                            <button class="btn btn-outline-warning me-2" routerLink="/editedu/{{Educacion.id}}">
+                                <i class="bi bi-pencil-square text-white fs-6" id="edit-icon">Editar</i>
+                            </button>
+                            <button class="btn btn-outline-danger" (click)="delete(Educacion.id)">
+                                <i class="bi bi-trash text-white fs-6" id="delete-icon">Eliminar</i>
+                            </button>
+                        </div>
                     </td>
                 </tr>
             </tbody>

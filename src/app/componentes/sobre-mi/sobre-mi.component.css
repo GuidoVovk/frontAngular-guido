@@ -4,7 +4,16 @@
 
 
 .perfil-about img {
-    filter: grayscale(50%);
+    filter: grayscale(60%);
+    filter:drop-shadow(5px);
     box-shadow: 10px 10px 20px black;
-    
+    filter: brightness(1.1);
+}
+
+.perfil-about h5{
+    letter-spacing: 5px;
+}
+
+.sub{
+    letter-spacing: 10px;
 }

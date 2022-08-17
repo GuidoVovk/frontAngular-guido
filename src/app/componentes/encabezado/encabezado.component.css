@@ -1,23 +1,35 @@
-header{
+/*header{
     width: 100%;
     height: 600px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../../../assets/imagen/fondo.png);
+    background: linear-gradient(rgba(62, 65, 79, 0.5), rgba(0, 0, 0, 0.412)), url(../../../assets/imagen/fondo.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    
+}*/
+header{
+    /*background-color: rgba(245, 245, 220, 0.9);*/
+    background-color: rgba(95, 158, 160, 0.8);
     
 }
 
 .banner p {
     letter-spacing: 5px;
-    font-size: 20px;
+    
 }
 
-.banner h1 span{
-    font-size: 35px;
+
+.banner h2 {
+    font-size: 50px;
     font-weight: bold;
+    
 }
 
-.boton-contacto:hover{
-    background-color: rgb(204, 182, 14);
-    font-weight: bold;
+.banner h2{
+    letter-spacing: 3px;
 }
+
+.banner h1{
+    letter-spacing: 10px;
+}
+
