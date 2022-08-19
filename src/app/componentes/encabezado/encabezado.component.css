@@ -1,17 +1,13 @@
-/*header{
+header{
     width: 100%;
-    height: 600px;
-    background: linear-gradient(rgba(62, 65, 79, 0.5), rgba(0, 0, 0, 0.412)), url(../../../assets/imagen/fondo.png);
+    height: 100vh;
+    background: linear-gradient(rgba(9, 9, 9, 0.453), rgba(237, 236, 248, 0.19)), url(../../../assets/imagen/vapor.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-
-    
-}*/
-header{
-    /*background-color: rgba(245, 245, 220, 0.9);*/
-    background-color: rgba(95, 158, 160, 0.8);
+    background-size: cover;
     
 }
+
 
 .banner p {
     letter-spacing: 5px;

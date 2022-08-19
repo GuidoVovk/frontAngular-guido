@@ -10,10 +10,16 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
-  public isLogged = false;
-  persona:any;
+  pers: persona[] = [];
+  
 
-  constructor(public personaService: PersonaService, private router:Router, private authService: AuthService) {
+
+  constructor(public personaService: PersonaService, private router:Router, private authService: AuthService) {}
+  isLogged = false;
+
+  ngOnInit(): void {
+    this.cargarPersona();
+ 
     this.authService.stateUser().subscribe( res => {
       if (res){
         console.log("está logueado");
@@ -23,10 +29,6 @@ export class EncabezadoComponent implements OnInit {
         this.isLogged = false;
       } 
     })
-   }
-
-  ngOnInit(): void {
-    this.personaService.verPersonas().subscribe(data => {this.persona = data});
     
   }
 
@@ -43,6 +45,14 @@ export class EncabezadoComponent implements OnInit {
     this.router.navigate(['/login'])
   }
 
-  
+  cargarPersona():void{
+    this.personaService.lista().subscribe(
+      data =>{
+        this.pers = data;
+      }, err => {
+        alert("No se pudo cargar");
+      }
+    )
+  }
 
 }

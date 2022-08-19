@@ -1,17 +1,20 @@
+<br>
+<br>
+<br>
 <!--Proyectos-->
 <div class="text-center">
-    <h3 class="sub text-warning text-uppercase bg-dark mt-5 mx-2 py-2">Proyectos</h3>
+    <h3 class="sub text-warning text-uppercase pt-3 py-2 border-top border-secondary">Proyectos</h3>
     <button *ngIf="isLogged" type="button"
-            class="btn btn-outline-success text-white" routerLink="/nuevoProyecto">Nuevo proyecto</button>
+            class="btn btn-outline-success text-white px-5" routerLink="/nuevoProyecto">Nuevo proyecto</button>
 </div>
-<div class="px-5 pt-3 pb-1 mx-4">
-    <div class="row mt-4 px-5 border border-white text-center pt-4"> 
+<div class="px-5 pt-3 pb-1 mx-5">
+    <div class="row mt-4 px-5 bg-dark text-center pt-4"> 
         <div *ngFor="let Proyectos of proyectos" class="col-sm-3 pb-3">
             <div class="card-body text-white border border-white p-1 bg-dark">
                 <img class="card-img-top bg-white" [src]="Proyectos.imgP" width="90%" height="150px" alt="Card image">
                 <h5 class="card-title mt-3 text-capitalize">{{Proyectos.nombreP}}</h5>
                 <p class="card-text">{{Proyectos.descripcionP}}</p>
-                <a [href]="Proyectos.urlP" class="btn btn-outline-warning">Ver más</a>
+                <a [href]="Proyectos.urlP" class="btn btn-outline-light mb-2">Ver más</a>
             </div>
             <div *ngIf="isLogged" class="mb-3">
                 <button class="btn btn-outline-primary mt-2 me-1" routerLink="/editProyecto/{{Proyectos.id}}">

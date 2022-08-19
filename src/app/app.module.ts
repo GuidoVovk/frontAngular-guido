@@ -28,6 +28,9 @@ import { EditSkillsComponent } from './componentes/habilidades/edit-skills.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NuevoProyectoComponent } from './componentes/proyectos/nuevo-proyecto.component';
 import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
+import { EditSobreMiComponent } from './componentes/sobre-mi/edit-sobre-mi/edit-sobre-mi.component';
+
 
 
 
@@ -56,7 +59,9 @@ import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.com
     NewSkillsComponent,
     EditSkillsComponent,
     NuevoProyectoComponent,
-    EditProyectoComponent
+    EditProyectoComponent,
+    NavbarComponent,
+    EditSobreMiComponent
    
   ],
   imports: [

@@ -1,20 +1,22 @@
-<div class="container">
-    <div class="row px-5 mt-3">
-       <div>
-        <form (ngSubmit)="onUpdate()" novalidate #f='ngForm'>
-            <div class="form-group text-white mb-3">
-                <label for="nombreE">Skill</label>
-                <input type="text" class="form-control" id="nombreSkill" name="nombreSkill" [(ngModel)]="skills.nombreSkill" required>
-            </div>
-            <div class="form-group text-white mb-3">
-                <label for="descripcionE">Porcentaje</label>
-                <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skills.porcentaje" required>
-            </div>
-            <button class="btn btn-success mt-4">
-                Actualizar skill
-            </button>
-        </form>
-       </div>
-    </div>
-</div>
 
+    <div class="container mt-5 p-5">
+        <div class="row px-5 mt-5">
+            <div class="border border-warning p-4">
+                <form (ngSubmit)="onUpdate()" novalidate #f='ngForm'>
+                    <div class="form-group text-white mb-3">
+                        <label for="nombreE">Habilidad</label>
+                        <input type="text" class="form-control" id="nombreSkill" name="nombreSkill"
+                            [(ngModel)]="skills.nombreSkill" required>
+                    </div>
+                    <div class="form-group text-white mb-3">
+                        <label for="descripcionE">Porcentaje</label>
+                        <input type="text" class="form-control" id="porcentaje" name="porcentaje"
+                            [(ngModel)]="skills.porcentaje" required>
+                    </div>
+                    <button class="btn btn-success mt-4">
+                        Actualizar habilidad
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>

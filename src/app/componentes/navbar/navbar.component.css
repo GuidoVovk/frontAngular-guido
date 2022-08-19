@@ -1,0 +1,13 @@
+.navbar-toggler {
+    border-color: whitesmoke;
+}
+
+.nav-link{
+    color: rgba(245, 245, 245, 0.6);
+}
+
+.nav-link:hover{
+   color: darkgoldenrod;
+   font-size: medium;
+}
+

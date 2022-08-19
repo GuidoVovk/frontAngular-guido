@@ -1,10 +1,13 @@
+<br>
+<br>
+<br>
 <div class="text-center">
-    <h3 class="sub text-warning text-uppercase bg-dark mt-5 mx-2 py-2">Educacion</h3>
-    <button *ngIf="isLogged" type="button" class="btn btn-outline-success text-white"
+    <h2 class="sub text-warning text-uppercase border-top border-secondary mt-5 py-2 pt-3">Educacion</h2>
+    <button *ngIf="isLogged" type="button" class="btn btn-outline-success text-white px-5"
             routerLink="/nuevaedu">Nueva educación</button>
 </div>
-<div class="px-5 pt-3 pb-1 mx-4" id="educacion">
-    <div class="row mt-4 px-5 border border-white">
+<div class="px-5 pt-3 pb-1 mx-5" id="educacion">
+    <div class="row mt-4 px-5 bg-dark">
         <table class="table">
             <tbody>
                 <tr *ngFor="let Educacion of educacion">
@@ -13,7 +16,7 @@
                         <p class="text-white-50">{{Educacion.fechaEdu}}</p>
                         <p class="text-white">{{Educacion.descripcionEdu}}</p>
                         <div *ngIf="isLogged">
-                            <button class="btn btn-outline-warning me-2" routerLink="/editedu/{{Educacion.id}}">
+                            <button class="btn btn-outline-primary me-2" routerLink="/editedu/{{Educacion.id}}">
                                 <i class="bi bi-pencil-square text-white fs-6" id="edit-icon">Editar</i>
                             </button>
                             <button class="btn btn-outline-danger" (click)="delete(Educacion.id)">

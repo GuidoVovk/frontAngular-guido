@@ -3,15 +3,32 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { persona } from '../model/persona.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class PersonaService {
-  url:String="http://localhost:8080/";
+  URL = "http://localhost:8080/perfil/";
 
-  constructor(private http:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  public verPersonas():Observable<any> {
-    return this.http.get<any>(this.url + "persona/encontrar/1");
+  public lista(): Observable<persona[]>{
+    return this.httpClient.get<persona[]>(this.URL + 'lista');
+  }
+
+  public detail(id: number):Observable<persona>{
+    return this.httpClient.get<persona>(this.URL + `detail/${id}`);
+  }
+
+  public save(pers: persona):Observable<any>{
+    return this.httpClient.post<any>(this.URL + 'create', pers);
+  }
+
+  public update(id: number, pers: persona):Observable<any>{
+    return this.httpClient.put<any>(this.URL + `update/${id}`, pers);
+  }
+
+  public delete(id: number):Observable<any>{
+    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
   }
 }

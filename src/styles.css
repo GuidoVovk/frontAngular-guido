@@ -1,7 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -10,19 +9,6 @@
     
 }
 body{
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-
-.h2-estilo{
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;   
-}
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.sub{
-    letter-spacing: 6px;
+   background-color:rgb(23, 2, 37);
 }
 
