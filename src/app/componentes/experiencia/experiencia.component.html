@@ -8,13 +8,14 @@
         experiencia</button>
 </div>
 <div class="px-5 pt-3 pb-1 mx-5" id="experiencia">
-    <div class="row mt-4 px-5 bg-dark">
+    <div class="row mt-4 px-5 box">
         <table class="table">
             <tbody>
                 <tr *ngFor="let Experiencia of expe">
                     <td>
                         <h4 class="text-uppercase fw-bold text-white mt-3">{{Experiencia.nombreE}}</h4>
-                        <p class="text-white">{{Experiencia.descripcionE}}</p>
+                        <h4 class="text-secondary">{{Experiencia.nombreEmpresa}}<span class="text-secondary"> | {{Experiencia.fechaE}}</span></h4>
+                        <p class="text-white pe-5 me-5">{{Experiencia.descripcionE}}</p>
                         <div *ngIf="isLogged">
                             <button class="btn btn-outline-primary me-2" routerLink="/editexp/{{Experiencia.id}}">
                                 <i class="bi bi-pencil-square text-white fs-6" id="edit-icon">Editar</i>

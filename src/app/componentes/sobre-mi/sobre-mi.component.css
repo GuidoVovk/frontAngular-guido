@@ -3,14 +3,12 @@
 }
 
 
-.perfil-about img {
+.imagen-perfil {
     filter: grayscale(60%);
-    filter:drop-shadow(5px);
-    box-shadow: 10px 10px 20px black;
-    filter: brightness(1.1);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
-.perfil-about h5{
+h5{
     letter-spacing: 5px;
 }
 
