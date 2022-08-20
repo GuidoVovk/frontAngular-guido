@@ -1,9 +1,8 @@
 <br>
 <br>
-<br>
 <div class="text-center">
-    <h2 class="sub text-warning text-uppercase border-top border-secondary mt-5 py-2 pt-3">Educacion</h2>
-    <button *ngIf="isLogged" type="button" class="btn btn-outline-success text-white px-5"
+    <h2 class="sub text-warning text-uppercase border-top border-secondary mt-5 py-2 pt-5">Educacion</h2>
+    <button *ngIf="isLogged" type="button" class="btn btn-success text-white px-5"
             routerLink="/nuevaedu">Nueva educación</button>
 </div>
 <div class="px-5 pt-3 pb-1 mx-5" id="educacion">
@@ -16,7 +15,7 @@
                         <p class="text-white-50">{{Educacion.fechaEdu}}</p>
                         <p class="text-white">{{Educacion.descripcionEdu}}</p>
                         <div *ngIf="isLogged">
-                            <button class="btn btn-outline-primary me-2" routerLink="/editedu/{{Educacion.id}}">
+                            <button class="btn btn-outline-warning me-2" routerLink="/editedu/{{Educacion.id}}">
                                 <i class="bi bi-pencil-square text-white fs-6" id="edit-icon">Editar</i>
                             </button>
                             <button class="btn btn-outline-danger" (click)="delete(Educacion.id)">

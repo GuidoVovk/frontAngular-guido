@@ -3,8 +3,8 @@
 <br>
 <!--Habilidades-->
 <div class="text-center">
-    <h2 class="sub text-warning text-uppercase mx-2 pt-3 border-top border-secondary ">Habilidades</h2>
-    <button *ngIf="isLogged" type="button" class="btn btn-outline-success text-white px-5" routerLink="/nuevaSkill">Nueva
+    <h2 class="sub text-warning text-uppercase mx-2 pt-5 border-top border-secondary ">Habilidades</h2>
+    <button *ngIf="isLogged" type="button" class="btn btn-success text-white px-5" routerLink="/nuevaSkill">Nueva
         habilidad</button>
 </div>
 <div class="px-5 pt-3 pb-1 mx-5">
@@ -17,7 +17,7 @@
                     {{Skills.porcentaje}}%</div>
             </div>
             <div *ngIf="isLogged" class="mb-3">
-                <button class="btn btn-outline-primary mt-2 me-1" routerLink="/editSkill/{{Skills.id}}">
+                <button class="btn btn-outline-warning mt-2 me-1" routerLink="/editSkill/{{Skills.id}}">
                     <i class="bi bi-pencil-square text-white fs-6" id="edit-icon">Editar</i>
                 </button><button class="btn btn-outline-danger mt-2" (click)="delete(Skills.id)">
                     <i class="bi bi-trash text-white fs-6" id="delete-icon">Eliminar</i>
@@ -46,7 +46,7 @@
         <div class="col-sm-4 pt-5">
             <img src="../../../assets/imagen/psychology_alt_FILL0_wght400_GRAD0_opsz48.png" alt=""
                 class="bg-white rounded-circle p-2 my-3">
-            <h5 class="">Pensamiento crítico</h5>
+            <h5 class="mb-5">Pensamiento crítico</h5>
         </div>
     </div>
 </div>

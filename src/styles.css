@@ -9,11 +9,19 @@
     
 }
 body{
-   background-color:rgb(23, 2, 37);
+   /*background-color:rgb(23, 2, 37);*/
+   background-color:rgba(255, 255, 255, 0.903);
 }
 
 .box{
-    box-shadow:  0 0 10px rgb(142, 7, 147);
-    background-color:rgba(0, 0, 0, 0.3);
+    box-shadow:  10px 10px 5px rgba(0, 0, 0, 0.767);
+    /*background-color:rgba(0, 0, 0, 0.3);*/
+    background-color:rgba(23, 2, 37, 0.90);
+}
+
+.formulario{
+    box-shadow:  10px 10px 5px rgba(0, 0, 0, 0.767);
+    /*background-color:rgba(0, 0, 0, 0.3);*/
+    background-color:rgba(23, 2, 37, 0.90);
 }
 

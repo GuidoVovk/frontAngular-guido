@@ -1,10 +1,9 @@
 <!--Experiencia-->
 <br>
 <br>
-<br>
 <div class="text-center">
-    <h2 class="sub text-warning text-uppercase mt-5 pt-3 border-top border-secondary">Experiencia</h2>
-    <button *ngIf="isLogged" type="button" class="btn btn-outline-success text-white px-5" (click)="onClick()">Nueva
+    <h2 class="sub text-warning text-uppercase mt-5 pt-5 border-top border-secondary">Experiencia</h2>
+    <button *ngIf="isLogged" type="button" class="btn btn-success text-white px-5" (click)="onClick()">Nueva
         experiencia</button>
 </div>
 <div class="px-5 pt-3 pb-1 mx-5" id="experiencia">
@@ -15,9 +14,9 @@
                     <td>
                         <h4 class="text-uppercase fw-bold text-white mt-3">{{Experiencia.nombreE}}</h4>
                         <h4 class="text-secondary">{{Experiencia.nombreEmpresa}}<span class="text-secondary"> | {{Experiencia.fechaE}}</span></h4>
-                        <p class="text-white pe-5 me-5">{{Experiencia.descripcionE}}</p>
+                        <p class="text-white me-2">{{Experiencia.descripcionE}}</p>
                         <div *ngIf="isLogged">
-                            <button class="btn btn-outline-primary me-2" routerLink="/editexp/{{Experiencia.id}}">
+                            <button class="btn btn-outline-warning me-2" routerLink="/editexp/{{Experiencia.id}}">
                                 <i class="bi bi-pencil-square text-white fs-6" id="edit-icon">Editar</i>
                             </button>
                             <button class="btn btn-outline-danger" (click)="delete(Experiencia.id)">

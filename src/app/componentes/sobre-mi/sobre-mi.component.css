@@ -4,13 +4,10 @@
 
 
 .imagen-perfil {
-    filter: grayscale(60%);
+    filter: grayscale(10%);
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.6);
 }
 
-h5{
-    letter-spacing: 5px;
-}
 
 .sub{
     letter-spacing: 10px;

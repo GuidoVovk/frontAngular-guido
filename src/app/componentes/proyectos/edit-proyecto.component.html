@@ -1,6 +1,6 @@
 <div class="container mt-5 p-5">
     <div class="row px-5 mt-5">
-       <div class="border border-warning p-4">
+       <div class="formulario p-4">
         <form (ngSubmit)="onUpdate()" novalidate #f='ngForm'>
             <div class="form-group text-white mb-3">
                 <label for="nombreP">Título Proyecto</label>
@@ -15,7 +15,7 @@
                 <input type="text" class="form-control" id="imgP" name="imgP" [(ngModel)]="proyectos.imgP" required>
             </div>
             <div class="form-group text-white mb-3">
-                <label for="descripcionE">URL enlace</label>
+                <label for="descripcionE">Link</label>
                 <input type="text" class="form-control" id="urlP" name="urlP" [(ngModel)]="proyectos.urlP" required>
             </div>
             <button class="btn btn-success mt-4">

@@ -1,5 +1,4 @@
 <br>
-<br>
 <!--About-->
 <div class="container-fluid text-center" id="sobre-mi">
     <h2 class="sub text-warning text-uppercase mt-5 pb-2">Sobre mí</h2>
@@ -7,17 +6,17 @@
 <div class="px-5 pt-3 pb-1 mx-5 sobre-mi"> 
     <div *ngFor="let Persona of pers" class="row py-4 box">
         <div class="text-center">
-            <button *ngIf="isLogged" class="btn btn-outline-primary me-2 mb-2 px-5" routerLink="/editPerfil/{{Persona.id}}">
+            <button *ngIf="isLogged" class="btn btn-outline-warning me-2 mb-2 px-5" routerLink="/editPerfil/{{Persona.id}}">
                 <i class="bi bi-pencil-square text-white fs-6" id="edit-icon">Editar</i>
             </button>
             </div> 
         <div class="col-lg-3 text-center">
-            <img [src]="Persona.imgPerfil" alt="" class="img-fluid mt-4 imagen-perfil" width="200px" height="250px">
+            <img [src]="Persona.imgPerfil" alt="" class="img-fluid mt-4 imagen-perfil mb-2" width="200px" height="250px">
         </div>
         <div class="col-lg-9 px-5 text-center d-flex align-items-center">
             <div class="">
                 <p class="fs-5 text-white mb-2"><span>{{Persona.puesto}}</span></p>
-                <p class="fs-5 text-white mt-5">{{Persona.descripcionPuesto}}</p>
+                <p class="text-white mt-5">{{Persona.descripcionPuesto}}</p>
             </div>
         </div>
         <div>
