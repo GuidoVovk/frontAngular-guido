@@ -18,27 +18,29 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { EditSobreMiComponent } from './componentes/sobre-mi/edit-sobre-mi/edit-sobre-mi.component';
 import { SobreMiComponent } from './componentes/sobre-mi/sobre-mi.component';
+import { GuardGuard } from './guard.guard';
 
 const routes: Routes = [
   {path:'', redirectTo: '/home', pathMatch:'full'},
   {path:'home', component: HomeComponent},
   {path:'login', component: LoginComponent},
   {path:'registro', component: RegistroComponent},
-  {path: 'nuevaexp', component: NewExperienciaComponent},
-  {path:'editexp/:id', component: EditExperienciaComponent},
-  {path: 'nuevaedu', component: NewEducacionComponent},
-  {path: 'editedu/:id', component: EditEducacionComponent},
-  {path: 'nuevaSkill', component: NewSkillsComponent},
-  {path: 'editSkill/:id', component: EditSkillsComponent},
-  {path: 'nuevoProyecto', component: NuevoProyectoComponent},
-  {path: 'editProyecto/:id', component: EditProyectoComponent},
+  {path: 'nuevaexp', component: NewExperienciaComponent, canActivate: [GuardGuard]},
+  {path:'editexp/:id', component: EditExperienciaComponent, canActivate: [GuardGuard]},
+  {path: 'nuevaedu', component: NewEducacionComponent, canActivate: [GuardGuard]},
+  {path: 'editedu/:id', component: EditEducacionComponent, canActivate: [GuardGuard]},
+  {path: 'nuevaSkill', component: NewSkillsComponent, canActivate: [GuardGuard]},
+  {path: 'editSkill/:id', component: EditSkillsComponent, canActivate: [GuardGuard]},
+  {path: 'nuevoProyecto', component: NuevoProyectoComponent, canActivate: [GuardGuard]},
+  {path: 'editProyecto/:id', component: EditProyectoComponent, canActivate: [GuardGuard]},
   {path: 'contacto', component: FooterComponent},
   {path: 'sobre-mi', component: SobreMiComponent},
   {path: 'experiencia', component: ExperienciaComponent},
   {path: 'estudios', component: EstudiosComponent},
   {path: 'habilidades', component: HabilidadesComponent},
   {path: 'proyectos', component: ProyectosComponent},
-  {path: 'editPerfil/:id', component: EditSobreMiComponent},
+  {path: 'editPerfil/:id', component: EditSobreMiComponent, canActivate: [GuardGuard]},
+  
 ];
 
 @NgModule({

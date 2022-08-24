@@ -1,5 +1,5 @@
 .navbar-toggler {
-    border-color: whitesmoke;
+    border-color: gold;
 }
 
 .nav-link{
@@ -7,7 +7,9 @@
 }
 
 .nav-link:hover{
-   color: darkgoldenrod;
-   font-size: medium;
+   color: goldenrod;
 }
+
+
+
 

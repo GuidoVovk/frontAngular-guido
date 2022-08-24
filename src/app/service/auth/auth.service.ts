@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Auth,createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, authState, User } from '@angular/fire/auth';
-import { first } from 'rxjs';
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  
+  isLoggedIn: boolean = false;
   
   constructor(private auth:Auth) { }
  
@@ -14,7 +15,9 @@ export class AuthService {
   }
 
   login({email, password}: any){
+    this.isLoggedIn = true;
     return signInWithEmailAndPassword(this.auth, email, password);
+    
   }
 
   logout(){
@@ -23,6 +26,10 @@ export class AuthService {
 
   stateUser(){
     return authState(this.auth);
+  }
+  
+  isAuthentic(){
+    return this.isLoggedIn;
   }
 
 

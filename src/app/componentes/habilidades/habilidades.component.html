@@ -2,14 +2,14 @@
 <br>
 <br>
 <!--Habilidades-->
-<div class="text-center">
-    <h2 class="sub text-warning text-uppercase mx-2 pt-5 border-top border-secondary ">Habilidades</h2>
-    <button *ngIf="isLogged" type="button" class="btn btn-success text-white px-5" routerLink="/nuevaSkill">Nueva
-        habilidad</button>
-</div>
-<div class="px-5 pt-3 pb-1 mx-5">
-    <div class="row mt-4 px-5 box pb-4">
-        <div *ngFor="let Skills of skills" class="col-sm-6 text-white pt-4">
+<div class="container px-4 pt-3 pb-1">
+    <div class="text-center">
+        <h2 class="sub text-dark text-uppercase mx-2 pt-5 border-top border-secondary">Habilidades</h2>
+        <button *ngIf="isLogged" type="button" class="btn btn-success text-white px-5" routerLink="/nuevaSkill">Nueva
+            habilidad</button>
+    </div>
+    <div class="row mt-4 px-4 box">
+        <div *ngFor="let Skills of skills" class="col-md-6 text-white pt-4">
             <h4 class="text-uppercase">{{Skills.nombreSkill}}</h4>
             <div class="progress mb-3">
                 <div class="progress-bar bg-warning text-dark fw-bold" role="progressbar"
@@ -31,19 +31,19 @@
 <!--Habilidades-->
 
 <!--Soft skills-->
-<div class="px-5 pt-3 pb-1 mx-5">
+<div class="container px-4 pt-3 pb-1">
     <div class="row mt-4 px-5 box text-center text-white">
-        <div class="col-sm-4 pb-4 pt-5">
+        <div class="col-sm-4 py-4">
             <img src="../../../assets/imagen/diversity_3_FILL0_wght400_GRAD0_opsz48.png" alt=""
                 class="bg-white rounded-circle p-2 my-3">
             <h5>Trabajo en equipo</h5>
         </div>
-        <div class="col-sm-4 pb-4 pt-5">
+        <div class="col-sm-4 py-4">
             <img src="../../../assets/imagen/communication_FILL0_wght400_GRAD0_opsz48.png" alt=""
                 class="bg-white rounded-circle p-2 my-3">
             <h5>Comunicación acertiva</h5>
         </div>
-        <div class="col-sm-4 pt-5">
+        <div class="col-sm-4 py-4">
             <img src="../../../assets/imagen/psychology_alt_FILL0_wght400_GRAD0_opsz48.png" alt=""
                 class="bg-white rounded-circle p-2 my-3">
             <h5 class="mb-5">Pensamiento crítico</h5>

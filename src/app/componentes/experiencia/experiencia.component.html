@@ -1,19 +1,20 @@
 <!--Experiencia-->
 <br>
 <br>
-<div class="text-center">
-    <h2 class="sub text-warning text-uppercase mt-5 pt-5 border-top border-secondary">Experiencia</h2>
-    <button *ngIf="isLogged" type="button" class="btn btn-success text-white px-5" (click)="onClick()">Nueva
-        experiencia</button>
-</div>
-<div class="px-5 pt-3 pb-1 mx-5" id="experiencia">
+<div class="container px-4 pt-3 pb-1">
+    <div class="text-center">
+        <h2 class="sub text-dark text-uppercase mt-5 pt-5 border-top border-secondary">Experiencia</h2>
+        <button *ngIf="isLogged" type="button" class="btn btn-success text-white px-5" routerLink="/nuevaexp">Nueva
+            experiencia</button>
+    </div>
     <div class="row mt-4 px-5 box">
         <table class="table">
             <tbody>
                 <tr *ngFor="let Experiencia of expe">
                     <td>
                         <h4 class="text-uppercase fw-bold text-white mt-3">{{Experiencia.nombreE}}</h4>
-                        <h4 class="text-secondary">{{Experiencia.nombreEmpresa}}<span class="text-secondary"> | {{Experiencia.fechaE}}</span></h4>
+                        <h4 class="text-secondary">{{Experiencia.nombreEmpresa}}<span class="text-secondary"> |
+                                {{Experiencia.fechaE}}</span></h4>
                         <p class="text-white me-2">{{Experiencia.descripcionE}}</p>
                         <div *ngIf="isLogged">
                             <button class="btn btn-outline-warning me-2" routerLink="/editexp/{{Experiencia.id}}">

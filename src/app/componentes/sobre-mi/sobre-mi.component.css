@@ -1,4 +1,4 @@
-.sobre-mi p span{
+.sobre-mi h3 span{
     letter-spacing: 5px;
 }
 
@@ -11,6 +11,18 @@
 
 .sub{
     letter-spacing: 10px;
+}
+
+@media (max-width: 240px) {
+    .mifuente {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 240px) {
+    .puesto span {
+        font-size: 15px;
+    }
 }
 
 

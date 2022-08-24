@@ -30,6 +30,7 @@ import { NuevoProyectoComponent } from './componentes/proyectos/nuevo-proyecto.c
 import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { EditSobreMiComponent } from './componentes/sobre-mi/edit-sobre-mi/edit-sobre-mi.component';
+import { GuardGuard } from './guard.guard';
 
 
 
@@ -75,7 +76,7 @@ import { EditSobreMiComponent } from './componentes/sobre-mi/edit-sobre-mi/edit-
     provideAuth(() => getAuth()),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [GuardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
