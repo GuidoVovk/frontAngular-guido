@@ -18,14 +18,14 @@ header{
     font-size:40px;
     font-weight: bold;
     letter-spacing: 3px;
-    /*text-shadow: 0 0 10px rgb(142, 7, 147), 0 0 10px rgb(142, 7, 147), 0 0 10px rgb(142, 7, 147);*/
-    
 }
 
 .banner h1{
-    letter-spacing: 10px;
-    /*text-shadow: 0 0 10px rgb(219, 212, 7), 0 0 10px rgb(219, 212, 7);*/
+    letter-spacing: 8px;
+    
 }
+
+
 
 
 
